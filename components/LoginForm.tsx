@@ -48,13 +48,7 @@ export default function LoginForm() {
     console.log(values);
 
     if (values.email && values.password) login(values.email, values.password);
-
-    console.log(isAuthenticated);
   }
-
-  useEffect(() => {
-    if (isAuthenticated) router.push("/dashboard");
-  }, [isAuthenticated, router]);
 
   return (
     <Card className=" min-w-[350px] lg:w-[550px] bg-zinc-300">

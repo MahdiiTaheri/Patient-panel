@@ -1,5 +1,5 @@
 function DashboardPage() {
-  return <div className="text-zinc-fo">dashboard page</div>;
+  return <div className="text-zinc-fo"></div>;
 }
 
 export default DashboardPage;

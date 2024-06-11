@@ -1,11 +1,13 @@
 "use client";
 
 import { toast } from "@/components/ui/use-toast";
+import { useRouter } from "next/navigation";
 import {
   Dispatch,
   SetStateAction,
   createContext,
   useContext,
+  useEffect,
   useState,
 } from "react";
 
@@ -31,6 +33,7 @@ const FAKE_USER = {
 };
 
 function AuthProvider({ children }: { children: React.ReactNode }) {
+  const router = useRouter();
   const [user, setUser] = useState({ name: "", email: "", password: "" });
   const [isAuthenticated, setIsAuthenticated] = useState(false);
 
@@ -45,6 +48,11 @@ function AuthProvider({ children }: { children: React.ReactNode }) {
         variant: "destructive",
       });
   }
+
+  useEffect(() => {
+    if (isAuthenticated) router.replace("/dashboard");
+    console.log(isAuthenticated);
+  }, [isAuthenticated, router]);
 
   return (
     <AuthContext.Provider value={{ user, setUser, isAuthenticated, login }}>
