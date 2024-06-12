@@ -10,9 +10,15 @@ type Props = {
 
 const Sidebar = ({ className }: Props) => {
   return (
+    // <div
+    //   className={cn(
+    //     "flex h-full lg:w-[279px] lg:fixed right-0 top-0 px-4 flex-col bg-gray-200",
+    //     className
+    //   )}
+    // >
     <div
       className={cn(
-        "flex h-full lg:w-[279px] lg:fixed right-0 top-0 px-4 flex-col bg-gray-200",
+        "flex h-full min-w-[100px] max-w-[300px] lg:w-[279px] lg:fixed right-0 top-0 px-4 flex-col bg-gray-200",
         className
       )}
     >

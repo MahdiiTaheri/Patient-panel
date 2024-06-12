@@ -1,7 +1,7 @@
 "use client";
 
 import { toast } from "@/components/ui/use-toast";
-import { useRouter } from "next/navigation";
+import { redirect, useRouter } from "next/navigation";
 import {
   Dispatch,
   SetStateAction,
@@ -22,6 +22,7 @@ type ContextType = {
   >;
   isAuthenticated: boolean;
   login: (email: string, password: string) => void;
+  logout: () => void;
 };
 
 const AuthContext = createContext<ContextType>({} as ContextType);
@@ -49,13 +50,23 @@ function AuthProvider({ children }: { children: React.ReactNode }) {
       });
   }
 
+  function logout() {
+    setUser({ name: "", email: "", password: "" });
+    setIsAuthenticated(false);
+    router.push("/");
+  }
+
   useEffect(() => {
     if (isAuthenticated) router.replace("/dashboard/patients");
+    // else if (!isAuthenticated) router.push("/");
+
     console.log(isAuthenticated);
   }, [isAuthenticated, router]);
 
   return (
-    <AuthContext.Provider value={{ user, setUser, isAuthenticated, login }}>
+    <AuthContext.Provider
+      value={{ user, setUser, isAuthenticated, login, logout }}
+    >
       {children}
     </AuthContext.Provider>
   );

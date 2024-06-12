@@ -1,5 +1,7 @@
+import PatientTable from "@/components/PatientTable";
+
 function PatientsPage() {
-  return <div className="">patients page</div>;
+  return <PatientTable />;
 }
 
 export default PatientsPage;
