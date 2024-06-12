@@ -1,5 +1,5 @@
 function PatientsPage() {
-  return <div>patients page</div>;
+  return <div className="">patients page</div>;
 }
 
 export default PatientsPage;

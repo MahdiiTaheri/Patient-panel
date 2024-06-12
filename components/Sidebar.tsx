@@ -12,7 +12,7 @@ const Sidebar = ({ className }: Props) => {
   return (
     <div
       className={cn(
-        "flex h-full lg:w-[279px] lg:fixed right-0 top-0 px-4 border-l-2 flex-col",
+        "flex h-full lg:w-[279px] lg:fixed right-0 top-0 px-4 flex-col bg-gray-200",
         className
       )}
     >

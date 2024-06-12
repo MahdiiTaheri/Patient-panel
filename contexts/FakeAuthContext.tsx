@@ -50,7 +50,7 @@ function AuthProvider({ children }: { children: React.ReactNode }) {
   }
 
   useEffect(() => {
-    if (isAuthenticated) router.replace("/dashboard");
+    if (isAuthenticated) router.replace("/dashboard/patients");
     console.log(isAuthenticated);
   }, [isAuthenticated, router]);
 
