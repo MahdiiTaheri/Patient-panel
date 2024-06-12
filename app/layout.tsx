@@ -24,6 +24,7 @@ export default function RootLayout({
         className={`bg-gradient-to-r from-gray-100 to-slate-100 ${myFont.className}`}
       >
         <AuthProvider>{children}</AuthProvider>
+
         <Toaster />
       </body>
     </html>

@@ -10,8 +10,6 @@ import {
 } from "@/components/ui/table";
 import { ScrollArea } from "./ui/scrollArea";
 import { cn } from "@/lib/utils";
-import { Button } from "./ui/button";
-import { EllipsisVertical } from "lucide-react";
 import Options from "./Options";
 
 interface Patients {
@@ -21,7 +19,7 @@ interface Patients {
   status: string;
 }
 
-const patients: Patients[] = [
+export const patients: Patients[] = [
   {
     id: "01",
     name: "علی علوی",
