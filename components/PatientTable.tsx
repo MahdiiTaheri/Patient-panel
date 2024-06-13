@@ -11,7 +11,7 @@ import {
 import { ScrollArea } from "./ui/scrollArea";
 import { cn } from "@/lib/utils";
 import Options from "./Options";
-import { Patient } from "@/app/dashboard/patients/page";
+import { Patient } from "./Patients";
 
 interface PatientTableProps {
   patients: Patient[];
