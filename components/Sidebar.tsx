@@ -19,7 +19,7 @@ const Sidebar = ({ className }: Props) => {
       <Link href="/">
         <div className="pt-8 pl-4 pb-7 flex items-center gap-x-3  mb-10">
           <Image src="/logo.png" height={60} width={60} alt="Logo" />
-          <h1 className="text-xl font-extrabold text-cyan-700">
+          <h1 className="text-xl font-extrabold text-hospital">
             پنل مدیریت بیماران
           </h1>
         </div>

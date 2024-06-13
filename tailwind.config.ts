@@ -1,9 +1,5 @@
 import type { Config } from "tailwindcss";
 
-const {
-  default: flattenColorPalette,
-} = require("tailwindcss/lib/util/flattenColorPalette");
-
 const config = {
   darkMode: ["class"],
   content: [
@@ -59,6 +55,7 @@ const config = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        hospital: "#5b85c5",
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -81,22 +78,7 @@ const config = {
       },
     },
   },
-  plugins: [
-    require("tailwindcss-animate"),
-    require("tailwindcss-rtl"),
-    // addVariablesForColors,
-  ],
+  plugins: [require("tailwindcss-animate"), require("tailwindcss-rtl")],
 } satisfies Config;
-
-// function addVariablesForColors({ addBase, theme }: any) {
-//   let allColors = flattenColorPalette(theme("colors"));
-//   let newVars = Object.fromEntries(
-//     Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
-//   );
-
-//   addBase({
-//     ":root": newVars,
-//   });
-// }
 
 export default config;

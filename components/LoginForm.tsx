@@ -98,7 +98,7 @@ export default function LoginForm() {
               )}
             />
             <div className="flex gap-8 justify-between ">
-              <Button className="text-lg bg-cyan-800" type="submit" size="lg">
+              <Button className="text-lg bg-hospital" type="submit" size="lg">
                 ورود
               </Button>
 

@@ -66,7 +66,7 @@ function AddButton({ onSubmit, open, setOpen }: AddButtonProps) {
   return (
     <div>
       <Dialog open={open} onOpenChange={setOpen}>
-        <DialogTrigger className="bg-cyan-700 text-gray-100 rounded-xl p-4 mx-6 mb-6">
+        <DialogTrigger className="bg-hospital text-gray-100 rounded-xl p-4 mx-6 mb-6">
           اضافه کردن بیمار جدید
         </DialogTrigger>
         <DialogContent>
@@ -175,7 +175,7 @@ function AddButton({ onSubmit, open, setOpen }: AddButtonProps) {
                         {/* </div> */}
                       </DialogClose>
                       <Button
-                        className="text-lg bg-cyan-800"
+                        className="text-lg bg-hospital"
                         type="submit"
                         size="lg"
                       >

@@ -14,7 +14,7 @@ function NotFoundPage() {
         <p className="text-gray-600 mb-4 text-lg">
           متاسفانه صفحه مورد نظر پیدا نشد☹️
         </p>
-        <Button className="bg-cyan-700 p-6 mt-4 text-lg" asChild>
+        <Button className="bg-hospital p-6 mt-4 text-lg" asChild>
           <Link href="/">بازگشت به صفحه اصلی</Link>
         </Button>
       </div>

@@ -30,7 +30,7 @@ function LoginPage() {
               alt="Logo"
             />
           </div>
-          <h2 className="text-4xl p-1 font-bold text-cyan-700 text-center">
+          <h2 className="text-4xl p-1 font-bold text-hospital text-center">
             بیمارستان
           </h2>
           <p className="text-center text-lg text-zinc-800/80">مدیریت بیماران</p>

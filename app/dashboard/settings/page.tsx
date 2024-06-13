@@ -16,7 +16,7 @@ function SettingsPage() {
         <p className="text-gray-600 mb-4 text-lg">
           رمز ورود: <span className="font-bold">1234</span>
         </p>
-        <Button className="bg-cyan-700 text-lg" size="lg">
+        <Button className="bg-hospital text-lg" size="lg">
           تغییر مشخصات
         </Button>
       </div>

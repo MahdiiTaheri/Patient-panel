@@ -25,7 +25,7 @@ function Options() {
         </DropdownMenuItem>
         <DropdownMenuItem>
           <Button
-            className="flex items-center justify-center p-4 w-full cursor-pointer rounded-lg hover:bg-cyan-700"
+            className="flex items-center justify-center p-4 w-full cursor-pointer rounded-lg hover:bg-hospital"
             variant="ghost"
           >
             <Pencil className="w-4 h-4 ml-2" />
