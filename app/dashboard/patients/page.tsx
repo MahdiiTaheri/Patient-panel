@@ -116,7 +116,9 @@ function PatientsPage() {
   const [open, setOpen] = useState(false);
 
   function handleSubmit(values: z.infer<typeof formSchema>) {
-    console.log(values);
+    // console.log(values);
+
+    if (!values.id || !values.name || !values.payment || !values.status) return;
 
     const newPatient: Patient = {
       id: String(values.id),
