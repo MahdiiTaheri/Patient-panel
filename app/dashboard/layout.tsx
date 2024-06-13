@@ -3,7 +3,10 @@ import Sidebar from "@/components/Sidebar";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "پنل بیماران | %s",
+  title: {
+    template: " خوش آمدید / %s",
+    default: " خوش آمدید / ادمین پنل",
+  },
 };
 
 function DashboardLayout({ children }: { children: React.ReactNode }) {
