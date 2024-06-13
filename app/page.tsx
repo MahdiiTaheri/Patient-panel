@@ -3,6 +3,9 @@ import bg from "@/public/pattern.png";
 import Image from "next/image";
 import logo from "@/public/logo.png";
 import Link from "next/link";
+import { Metadata } from "next";
+
+export const metadata: Metadata = { title: "ورود به پنل" };
 
 function LoginPage() {
   return (

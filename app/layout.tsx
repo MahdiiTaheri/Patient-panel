@@ -9,7 +9,7 @@ const myFont = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Patient Dashboard",
+  title: "ادمین پنل بیماران",
   description: "A Admin Panel for Managing Patients",
 };
 

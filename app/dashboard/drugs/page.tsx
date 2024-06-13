@@ -1,4 +1,9 @@
 import DrugsTable from "@/components/DrugsTable";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "پنل داروها",
+};
 
 export interface Drug {
   id: string;

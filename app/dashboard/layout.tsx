@@ -1,5 +1,10 @@
 import Navbar from "@/components/Navbar";
 import Sidebar from "@/components/Sidebar";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "پنل بیماران | %s",
+};
 
 function DashboardLayout({ children }: { children: React.ReactNode }) {
   return (
