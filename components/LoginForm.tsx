@@ -48,7 +48,7 @@ export default function LoginForm() {
   }
 
   return (
-    <Card className=" min-w-[350px] lg:w-[550px] bg-zinc-300">
+    <Card className=" min-w-[350px] lg:w-[500px] bg-zinc-300">
       <CardHeader>
         <CardTitle className="font-semibold text-lg text-center">
           ورود به بخش بیماران

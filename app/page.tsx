@@ -21,7 +21,7 @@ function LoginPage() {
 
       <main className="min-h-screen flex items-center flex-col justify-center gap-8">
         <div className="flex flex-col mb-6 items-center justify-center">
-          <div className="relative w-40 h-40">
+          <div className="relative w-20 h-20">
             <Image
               src={logo}
               quality={100}
@@ -30,10 +30,10 @@ function LoginPage() {
               alt="Logo"
             />
           </div>
-          <h2 className="text-5xl p-1 font-bold text-cyan-700 text-center">
+          <h2 className="text-4xl p-1 font-bold text-cyan-700 text-center">
             بیمارستان
           </h2>
-          <p className="text-center text-xl text-zinc-800/80">مدیریت بیماران</p>
+          <p className="text-center text-lg text-zinc-800/80">مدیریت بیماران</p>
         </div>
 
         <LoginForm />
