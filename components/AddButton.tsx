@@ -28,11 +28,13 @@ const StatusTypeSchema = z.enum(["پرداخت نشده", "ترخیص شده", "
   required_error: "این فیلد باید پر شود",
 });
 export const formSchema = z.object({
-  id: z
-    .number({
-      invalid_type_error: "آیدی باید عدد باشد",
-    })
-    .min(1, { message: "آیدی نباید خالی باشد" }),
+  id: z.preprocess(
+    (a) => parseInt(z.string().parse(a), 10),
+    z
+      .number({ invalid_type_error: "آیدی باید عدد باشد" })
+      .positive()
+      .min(1, { message: "آیدی نباید خالی باشد" })
+  ),
   name: z
     .string()
     .min(3, { message: "نام بیمار نباید کمتر از 3 حرف باشد" })

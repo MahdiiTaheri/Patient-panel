@@ -1,17 +1,14 @@
-import { Patient } from "@/app/dashboard/patients/page";
 import { ScrollArea } from "./ui/scrollArea";
 import {
   Table,
   TableBody,
   TableCaption,
   TableCell,
-  TableFooter,
   TableHead,
   TableHeader,
   TableRow,
 } from "./ui/table";
 import Options from "./Options";
-import { cn } from "@/lib/utils";
 import { Drug } from "@/app/dashboard/drugs/page";
 
 interface DrugsTableProps {

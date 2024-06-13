@@ -1,5 +1,5 @@
-import { LogOut, User } from "lucide-react";
-import { Button } from "./ui/button";
+import { User } from "lucide-react";
+
 import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
 import {
   DropdownMenu,

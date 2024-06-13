@@ -41,7 +41,7 @@ export default function PatientTable({ patients }: PatientTableProps) {
   }));
 
   return (
-    <ScrollArea className="h-[800px] w-full p-4">
+    <ScrollArea className="h-[770px] w-full p-4">
       <Table className="overflow-hidden" dir="rtl">
         <TableCaption>لیست بیماران اخیر</TableCaption>
         <TableHeader>

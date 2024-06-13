@@ -5,8 +5,6 @@ import logo from "@/public/logo.png";
 import Link from "next/link";
 
 function LoginPage() {
-  console.log("hello");
-
   return (
     <>
       <Image

@@ -37,9 +37,7 @@ export default function PatientsForm() {
     },
   });
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    console.log(values);
-  }
+  function onSubmit(values: z.infer<typeof formSchema>) {}
 
   return (
     <Card className=" min-w-[350px] lg:w-full border-none   ">

@@ -1,7 +1,7 @@
 "use client";
 
 import { toast } from "@/components/ui/use-toast";
-import { redirect, useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import {
   Dispatch,
   SetStateAction,
@@ -34,6 +34,7 @@ const FAKE_USER = {
 };
 
 function AuthProvider({ children }: { children: React.ReactNode }) {
+  const pathname = usePathname();
   const router = useRouter();
   const [user, setUser] = useState({ name: "", email: "", password: "" });
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -58,10 +59,17 @@ function AuthProvider({ children }: { children: React.ReactNode }) {
 
   useEffect(() => {
     if (isAuthenticated) router.replace("/dashboard/patients");
-    // else if (!isAuthenticated) router.push("/");
-
-    console.log(isAuthenticated);
   }, [isAuthenticated, router]);
+
+  useEffect(() => {
+    if (
+      (pathname.startsWith("/dashboard/patients") ||
+        pathname.startsWith("/dashboard/drugs") ||
+        pathname.startsWith("/dashboard/settings")) &&
+      !isAuthenticated
+    )
+      router.push("/");
+  }, [router, pathname, isAuthenticated]);
 
   return (
     <AuthContext.Provider
