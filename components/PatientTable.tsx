@@ -8,7 +8,7 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-import { ScrollArea } from "./ui/scrollArea";
+import { ScrollArea, ScrollBar } from "./ui/scrollArea";
 import { cn } from "@/lib/utils";
 import Options from "./Options";
 import { Patient } from "./Patients";
@@ -41,7 +41,7 @@ export default function PatientTable({ patients }: PatientTableProps) {
   }));
 
   return (
-    <ScrollArea className="h-[770px] w-full p-4">
+    <ScrollArea className="h-[770px] w-full p-4 overflow-x-auto">
       <Table className="overflow-hidden" dir="rtl">
         <TableCaption>لیست بیماران اخیر</TableCaption>
         <TableHeader>
@@ -89,6 +89,7 @@ export default function PatientTable({ patients }: PatientTableProps) {
           </TableRow>
         </TableFooter>
       </Table>
+      <ScrollBar orientation="horizontal" />
     </ScrollArea>
   );
 }
